@@ -9,6 +9,9 @@ import { Link } from "react-router-dom";
 //COMPONENTS
 import Header from "../../components/header";
 
+//SEO
+import { Helmet } from "react-helmet";
+
 //DATA
 import { NOT_FOUND_IMG } from "../../services/data";
 
@@ -23,25 +26,32 @@ export default function NotFound() {
   }, []);
 
   return (
-    <div className="notFound">
-      <Header />
-      <div className="notFound__content">
-        <Link to="/">
-          <h1>SORRY</h1>
-          <h2>we couldn't find that page</h2>
-          <h3>
-            Try searching or go to <strong>Amazon's home page</strong>.
-          </h3>
-        </Link>
-        <Link to="/">
-          <figure>
-            <img
-              src={process.env.PUBLIC_URL + `/images/not_found/${dogSelected}`}
-              alt="Cute Dog"
-            />
-          </figure>
-        </Link>
+    <>
+      <Helmet>
+        <title>Not Found | Amazon Clone</title>
+      </Helmet>
+      <div className="notFound">
+        <Header />
+        <div className="notFound__content">
+          <Link to="/">
+            <h1>SORRY</h1>
+            <h2>we couldn't find that page</h2>
+            <h3>
+              Try searching or go to <strong>Amazon's home page</strong>.
+            </h3>
+          </Link>
+          <Link to="/">
+            <figure>
+              <img
+                src={
+                  process.env.PUBLIC_URL + `/images/not_found/${dogSelected}`
+                }
+                alt="Cute Dog"
+              />
+            </figure>
+          </Link>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
