@@ -51,3 +51,11 @@ export const PRODUCTS = [
     rating: 4,
   },
 ];
+
+export const NOT_FOUND_IMG = [
+  "mae.jpg",
+  "cannoli.jpg",
+  "frodo.jpg",
+  "sir_ulysses.jpg",
+  "toshii.jpg",
+];

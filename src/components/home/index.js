@@ -7,9 +7,6 @@ import Product from "../product";
 //DATA
 import { PRODUCTS } from "../../services/data";
 
-//HELPERS
-//import { getRandomInt } from "../../helpers";
-
 export default function Home() {
   const [products, setProducts] = useState([]);
 

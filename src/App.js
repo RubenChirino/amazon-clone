@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import CheckoutPage from "./pages/checkoutPage";
 import loginPage from "./pages/loginPage";
+import NotFound from "./pages/notFound/notFound";
 
 //CONTEXT
 import { useStateValue } from "./Context/StateProvider";
@@ -42,6 +43,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/login" component={loginPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
+          <Route component={NotFound} />
         </Switch>
       </div>
     </Router>
