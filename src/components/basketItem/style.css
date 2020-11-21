@@ -17,6 +17,10 @@
   padding: 3px 6px 3px 6px;
 }
 
+.basketItem__info > button:hover {
+  background-color: #d5ab43;
+}
+
 .basketItem__image {
   object-fit: contain;
   width: 180px;

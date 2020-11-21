@@ -8,6 +8,8 @@ import HomePage from "./pages/homePage";
 import CheckoutPage from "./pages/checkoutPage";
 import loginPage from "./pages/loginPage";
 import NotFound from "./pages/notFound/notFound";
+import PaymentPage from "./pages/paymentPage";
+import OrdersPage from "./pages/ordersPage/ordersPage";
 
 //CONTEXT
 import { useStateValue } from "./Context/StateProvider";
@@ -43,6 +45,8 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/login" component={loginPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
+          <Route exact path="/payment" component={PaymentPage} />
+          <Route exact path="/orders" component={OrdersPage} />
           <Route component={NotFound} />
         </Switch>
       </div>

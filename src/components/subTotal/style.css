@@ -31,3 +31,7 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: black;
 }
+
+.subtotal > button:hover {
+  background-color: #d5ab43;
+}

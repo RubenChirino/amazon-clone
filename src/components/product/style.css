@@ -16,6 +16,25 @@
   height: 100%;
   min-height: 400px;
   max-height: 400px;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+}
+
+.product:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.39);
 }
 
 .product__info {
@@ -44,4 +63,9 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
   padding: 4px;
+  cursor: pointer;
+}
+
+.product > button:hover {
+  background-color: #d5ab43;
 }

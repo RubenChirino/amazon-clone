@@ -13,6 +13,7 @@ export default function BasketItem({
   price,
   rating,
   quantity,
+  hideButton,
 }) {
   const [{ basket }, dispatch] = useStateValue();
 
@@ -88,9 +89,11 @@ export default function BasketItem({
               <Fragment key={i}>⭐</Fragment>
             ))}
         </span>
-        <button onClick={removeFromBasket} className="basketItem__button">
-          Remove from basket
-        </button>
+        {!hideButton && (
+          <button onClick={removeFromBasket} className="basketItem__button">
+            Remove from basket
+          </button>
+        )}
       </div>
     </article>
   );
