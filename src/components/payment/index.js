@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 //STYLES
 import "./style.css";
@@ -39,7 +39,29 @@ export default function Paymemt() {
   const [disabled, setDisabled] = useState(false);
   const [clientSecret, setClientSecret] = useState(true);
 
+  //REF
+  const refLocation = useRef(null);
+
   useEffect(() => {
+    if (navigator.geolocation) {
+      //check if geolocation is available
+      navigator.geolocation.getCurrentPosition(function (position) {
+        console.log(position);
+
+        /* You need a Google account to make the following requests
+        fetch(
+          `http://maps.googleapis.com/maps/api/geocode/json?latlng=${position.coords.latitude},${position.coords.longitude}&sensor=false`
+        )
+          .then((response) => response.json())
+          .then((data) => console.log("PLACE DATA:", data));
+
+          //-------
+
+          refLocation.current.src = `https://maps.googleapis.com/maps/api/staticmap?center=${position.coords.latitude},${position.coords.longitude}&zoom=13&size=800x400&sensor=false`;
+        */
+      });
+    }
+
     //generate the special stripe secret which allows us to charge a customer
     const getClientSecret = async () => {
       const response = await axios({
@@ -119,6 +141,9 @@ export default function Paymemt() {
             <p>{user ? user.email : "Guest"}</p>
             <p>123 React Lane</p>
             <p>Los Angeles, CA</p>
+            {/* <figure>
+              <img ref={refLocation} src="" alt="" />
+            </figure> */}
           </div>
         </div>
         {/* Payment -Review Items */}
