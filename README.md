@@ -1,5 +1,21 @@
 # Frontend (React)
 
+## Home
+
+![home](https://github.com/RubenChirino/amazon-clone/assets/52714843/25d42a20-d32a-470f-b2ab-aa28ad7a91a5)
+
+## Sign In
+
+<img width="1422" alt="Screenshot 2023-08-05 at 22 01 00" src="https://github.com/RubenChirino/amazon-clone/assets/52714843/23bdc86c-8855-485c-a5ce-26b81068ac46">
+
+## Cart
+
+![cart](https://github.com/RubenChirino/amazon-clone/assets/52714843/8601f273-041b-431b-80f5-fe379c94246e)
+
+## Checkout 
+
+![checkout](https://github.com/RubenChirino/amazon-clone/assets/52714843/62fa784e-df19-476c-baa3-55f201d8d7a5)
+
 ### `npm start`
 
 Runs the app in the development mode.\
