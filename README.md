@@ -1,4 +1,4 @@
-# Frontend (React)
+# Amazon Clone
 
 ## Home
 
